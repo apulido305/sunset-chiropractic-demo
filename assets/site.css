@@ -1,0 +1,25 @@
+body { font-family: Inter, system-ui, sans-serif; background: #FAFAF7; color: #23201E; }
+.font-display { font-family: Outfit, sans-serif; }
+.font-label { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+
+/* Visible keyboard focus everywhere (WCAG 2.4.7) */
+:focus-visible { outline: 3px solid #6E4329; outline-offset: 2px; border-radius: 4px; }
+.bg-terracotta-deep :focus-visible, footer :focus-visible, .on-dark :focus-visible { outline-color: #FFFFFF; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #6E4329; outline-offset: 1px; }
+
+/* Skip link (WCAG 2.4.1) */
+.skip-link { position: absolute; left: 1rem; top: -100px; z-index: 100; background: #23201E; color: #fff; padding: .75rem 1rem; border-radius: .5rem; font-weight: 600; }
+.skip-link:focus { top: 1rem; }
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .hover\:scale-110:hover { transform: none !important; }
+}
+
+/* Blog article content */
+.post-body img { border-radius: .75rem; height: auto; max-width: 100%; }
+.post-body a { color: #6E4329; }
+.post-body table { display: block; overflow-x: auto; }
+[hidden] { display: none !important; }
